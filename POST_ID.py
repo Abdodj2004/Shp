@@ -1,39 +1,39 @@
-import os
-try:
-    import requests
-except:
-    os.system('pip install requests ')
+استيراد  نظام التشغيل
+جرب :
+     طلبات الاستيراد
+باستثناء :
+    نظام التشغيل . النظام ( "طلبات تثبيت النقطة" )
    
-try:
-    import time
-except:
-    os.system('pip install time')
+جرب :
+     وقت الاستيراد
+باستثناء :
+    نظام التشغيل . النظام ( "وقت تثبيت النقطة" )
 
 
 
-g = "\033[1;32m"
-r = "\033[1;31m"
-id=input(g+' inter your  tele id')
-token=input(r+"inter your Tokn bot")
-link = input(g+"[~] ادخل رابط المنشور : ")
+ز  =  "\ 033 [1 ؛ 32 م"
+r  =  "\ 033 [1 ؛ 31 م"
+id = input ( g + "inter your tele id" )
+الرمز المميز = الإدخال ( r + "inter your Tokn bot" )
+link  =  input ( g + "[~] ادخل رابط المنشور:" )
 
-m=0
-try:
-	ree = requests.get(link).text
-	if "media_id" in ree:
+م = 0
+جرب :
+	ree  =  الطلبات . الحصول على ( رابط ). نص
+	إذا كان  "media_id"  في  ree :
 		
-		uu = ree.split('media_id":"')[1].split('"')[0]
-		print(f"{g}[ {uu} ] DONE GET ID POST")
-		time.sleep(2)
-		requests.get(f"https://api.telegram.org/bot{token}/sendMessage?chat_id={id}&text=ايدي منشور{uu}")
+		uu  =  ree . انقسام ( 'media_id ":"' ) [ 1 ]. انقسام ( '"' ) [ 0 ]
+		طباعة ( f " { g } [ { uu } ] DONE GET ID POST" )
+		الوقت . ينام ( 2 )
+		الطلبات . get ( f "https://api.telegram.org/bot { token } / sendMessage؟ chat_id = { id } & text = ايدي منشور { uu } " )
 		
-		url = "https://www.instagram.com/api/v1/media/"+id+"/likers/"
-		headers = {
-    "Host": "www.instagram.com",
-    "user-agent": "Mozilla/5.0 (Linux; Android 7.0; Lenovo K53a48 Build/NRD90N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.91 Mobile Safari/537.36",
-    "viewport-width": "360",
-    "accept": "*/*",
-    "x-asbd-id": "198387",
+		url  =  "https://www.instagram.com/api/v1/media/" + id + "/ likers /"
+		رؤوس  = {
+    "المضيف" : "www.instagram.com" ،
+    "وكيل المستخدم" : "Mozilla / 5.0 (Linux ؛ Android 7.0 ؛ Lenovo K53a48 Build / NRD90N) AppleWebKit / 537.36 (KHTML ، مثل Gecko) Chrome / 55.0.2883.91 Mobile Safari / 537.36" ،
+    "viewport-width" : "360" ،
+    "قبول" : "* / *" ،
+    "x-asbd-id" : "198387" ،
     "x-csrftoken": "Ye7NqApGmQVybvKqBQVwKlceDO0Zht6J",
     "x-ig-app-id": "1217981644879628",
     "referer": link,
